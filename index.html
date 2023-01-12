@@ -91,6 +91,11 @@
                 result.textContent = e.data;
                 console.log('Message received from worker');
             }
+            // if worker needs to be terminated    
+            function stopWorker() {
+              myWorker.terminate();
+              myWorker = undefined;
+            }
         } else {
             console.log('Your browser doesn\'t support web workers.');
         }
